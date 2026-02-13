@@ -1,12 +1,13 @@
 name: Deploy Worker
+
 于:
   push:
-    分支:
+    branches:
       - main
   pull_request:
   repository_dispatch:
-  workflow_dispatch:
-  
+  workflow_dispatch:   # 👈 加这一行
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
